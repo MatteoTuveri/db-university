@@ -28,10 +28,13 @@ GROUP BY
 
 1. Contare quanti iscritti ci sono stati ogni anno
 	a. SELECT COUNT(*) AS `subscribes`,DATE_FORMAT(`enrolment_date`,'%Y') FROM `students` GROUP BY DATE_FORMAT(`enrolment_date`,'%Y');
+
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 	a.SELECT COUNT(*) AS `teachers`,`office_address` FROM `teachers` GROUP BY `office_address`;
+
 3. Calcolare la media dei voti di ogni appello d'esame
 	a.SELECT AVG(`vote`) AS `avg_gardes`,`exam_id` FROM `exam_student` GROUP BY `exam_id`;
+	
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 	a.SELECT COUNT(*) AS `courses`,`department_id` FROM `degrees` GROUP BY `department_id`;
 
